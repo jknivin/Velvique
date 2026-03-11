@@ -7,9 +7,9 @@ import java.time.LocalDateTime;
 @Getter
 public class ApiErrorResponse {
 
-    private LocalDateTime time;
-    private int code;
-    private String message;
+    private final LocalDateTime time;
+    private final int code;
+    private final String message;
 
     public ApiErrorResponse(int code , String message){
         this.time = LocalDateTime.now();
