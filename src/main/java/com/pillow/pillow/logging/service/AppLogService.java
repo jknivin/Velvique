@@ -1,7 +1,7 @@
 package com.pillow.pillow.logging.service;
 
 import com.pillow.pillow.logging.model.AppLog;
-import com.pillow.pillow.logging.Repository.AppLogRepository;
+import com.pillow.pillow.logging.repository.AppLogRepository;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 

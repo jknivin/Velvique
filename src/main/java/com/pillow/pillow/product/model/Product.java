@@ -1,6 +1,6 @@
 package com.pillow.pillow.product.model;
 
-import com.pillow.pillow.common.Model.BaseModel;
+import com.pillow.pillow.common.model.BaseModel;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

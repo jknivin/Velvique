@@ -1,7 +1,7 @@
 package com.pillow.pillow.product.mapper;
 
-import com.pillow.pillow.product.DTO.ProductRequestDTO;
-import com.pillow.pillow.product.DTO.ProductResponseDTO;
+import com.pillow.pillow.product.dto.ProductRequestDTO;
+import com.pillow.pillow.product.dto.ProductResponseDTO;
 import com.pillow.pillow.product.model.Product;
 import com.pillow.pillow.product.model.ProductImage;
 

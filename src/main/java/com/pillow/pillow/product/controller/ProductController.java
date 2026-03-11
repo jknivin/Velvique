@@ -1,8 +1,8 @@
 package com.pillow.pillow.product.controller;
 
-import com.pillow.pillow.common.DTO.GlobalResponseDTO;
-import com.pillow.pillow.product.DTO.ProductRequestDTO;
-import com.pillow.pillow.product.DTO.ProductResponseDTO;
+import com.pillow.pillow.common.dto.GlobalResponseDTO;
+import com.pillow.pillow.product.dto.ProductRequestDTO;
+import com.pillow.pillow.product.dto.ProductResponseDTO;
 import com.pillow.pillow.product.service.ProductService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
 package com.pillow.pillow.logging.controller;
 
-import com.pillow.pillow.common.DTO.GlobalResponseDTO;
+import com.pillow.pillow.common.dto.GlobalResponseDTO;
 import com.pillow.pillow.logging.model.AppLog;
 import com.pillow.pillow.logging.service.AppLogService;
 import org.springframework.http.ResponseEntity;
