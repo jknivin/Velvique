@@ -7,13 +7,13 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
 @Table(name = "products")
-@EqualsAndHashCode(callSuper = false)
 @Setter
 @Getter
 @AllArgsConstructor
@@ -35,7 +35,7 @@ public class Product extends BaseModel {
     @NotNull
     @Positive
     @Column(nullable = false)
-    private Integer price;
+    private BigDecimal price;
 
     @OneToMany(mappedBy = "product" ,cascade = CascadeType.ALL,orphanRemoval = true,fetch = FetchType.LAZY)
     private List<ProductImage> images = new ArrayList<>();
