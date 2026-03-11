@@ -1,6 +1,6 @@
 package com.pillow.pillow.product.controller;
 
-import com.pillow.pillow.common.dto.GlobalResponseDTO;
+import com.pillow.pillow.common.dto.ApiResponse;
 import com.pillow.pillow.product.dto.ProductRequestDTO;
 import com.pillow.pillow.product.dto.ProductResponseDTO;
 import com.pillow.pillow.product.service.ProductService;
@@ -22,21 +22,21 @@ public class ProductController {
     }
 
     @PostMapping
-    public ResponseEntity<GlobalResponseDTO<ProductResponseDTO>> addProduct(@Valid @RequestBody ProductRequestDTO data){
+    public ResponseEntity<ApiResponse<ProductResponseDTO>> addProduct(@Valid @RequestBody ProductRequestDTO data){
         return ResponseEntity.status(201)
-                .body(new GlobalResponseDTO<>(201,"Product added successfully",
+                .body(new ApiResponse<>(201,"Product added successfully",
                         productService.addProduct(data)));
     }
 
     @GetMapping
-    public ResponseEntity<GlobalResponseDTO<List<ProductResponseDTO>>> getProduct(@RequestParam(defaultValue = "0") int page,@RequestParam(defaultValue = "10") int size){
-        return ResponseEntity.ok(new GlobalResponseDTO<>(200,"Products Fetched Successfully" ,
+    public ResponseEntity<ApiResponse<List<ProductResponseDTO>>> getProduct(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size){
+        return ResponseEntity.ok(new ApiResponse<>(200,"Products Fetched Successfully" ,
                 productService.getProducts(page , size)));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<GlobalResponseDTO<ProductResponseDTO>> getProductById(@PathVariable UUID id){
-        return ResponseEntity.ok(new GlobalResponseDTO<>(200,"Product fetched successfully fetched with id "+id,
+    public ResponseEntity<ApiResponse<ProductResponseDTO>> getProductById(@PathVariable UUID id){
+        return ResponseEntity.ok(new ApiResponse<>(200,"Product fetched successfully fetched with id "+id,
                 productService.getProductById(id)));
     }
 }

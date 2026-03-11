@@ -3,7 +3,7 @@ package com.pillow.pillow.auth.controller;
 import com.pillow.pillow.auth.dto.AuthResponseDTO;
 import com.pillow.pillow.auth.dto.UserSignInDTO;
 import com.pillow.pillow.auth.dto.UserSignUpDTO;
-import com.pillow.pillow.common.dto.GlobalResponseDTO;
+import com.pillow.pillow.common.dto.ApiResponse;
 import com.pillow.pillow.auth.service.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -23,14 +23,14 @@ public class AuthController {
     }
 
     @PostMapping("/signup")
-    public ResponseEntity<GlobalResponseDTO<AuthResponseDTO>> signUp(@Valid @RequestBody UserSignUpDTO data){
+    public ResponseEntity<ApiResponse<AuthResponseDTO>> signUp(@Valid @RequestBody UserSignUpDTO data){
         return ResponseEntity.status(201)
-                .body(new GlobalResponseDTO<>(201,"User Created successfully",authService.signUp(data)));
+                .body(new ApiResponse<>(201,"User Created successfully",authService.signUp(data)));
     }
 
     @PostMapping("/signin")
-    public ResponseEntity<GlobalResponseDTO<AuthResponseDTO>> signIn(@Valid @RequestBody UserSignInDTO data){
-        return ResponseEntity.ok(new GlobalResponseDTO<>(200,"Login success",authService.login(data)));
+    public ResponseEntity<ApiResponse<AuthResponseDTO>> signIn(@Valid @RequestBody UserSignInDTO data){
+        return ResponseEntity.ok(new ApiResponse<>(200,"Login success",authService.login(data)));
     }
 
 }

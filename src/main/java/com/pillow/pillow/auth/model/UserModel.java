@@ -1,7 +1,7 @@
 package com.pillow.pillow.auth.model;
 
-import com.pillow.pillow.auth.model.Enum.UserRole;
-import com.pillow.pillow.auth.model.Enum.UserStatus;
+import com.pillow.pillow.auth.model.enums.UserRole;
+import com.pillow.pillow.auth.model.enums.UserStatus;
 import com.pillow.pillow.common.model.BaseModel;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;

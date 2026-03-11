@@ -1,4 +1,4 @@
-package com.pillow.pillow.auth.model.Enum;
+package com.pillow.pillow.auth.model.enums;
 
 public enum UserStatus {
     ACTIVE,

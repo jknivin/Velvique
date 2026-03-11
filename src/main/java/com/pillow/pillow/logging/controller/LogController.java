@@ -1,6 +1,6 @@
 package com.pillow.pillow.logging.controller;
 
-import com.pillow.pillow.common.dto.GlobalResponseDTO;
+import com.pillow.pillow.common.dto.ApiResponse;
 import com.pillow.pillow.logging.model.AppLog;
 import com.pillow.pillow.logging.service.AppLogService;
 import org.springframework.http.ResponseEntity;
@@ -23,8 +23,8 @@ public class LogController {
     }
 
     @GetMapping
-    public ResponseEntity<GlobalResponseDTO<List<AppLog>>> getLogs(){
-        return ResponseEntity.ok(new GlobalResponseDTO<>(200,"Logs fetched successfully",appLogService.getLogs()));
+    public ResponseEntity<ApiResponse<List<AppLog>>> getLogs(){
+        return ResponseEntity.ok(new ApiResponse<>(200,"Logs fetched successfully",appLogService.getLogs()));
     }
 
 }
